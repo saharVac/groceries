@@ -1,7 +1,7 @@
 import 'jquery'
 import React, { useRef } from "react";
 
-function ToGetSection({ toGet, addToGet, switchToAlreadyHave }) {
+function ToGetSection({ have, toGet, addToGet, switchToAlreadyHave }) {
 
     const addToGetRef = useRef()
 
@@ -10,15 +10,24 @@ function ToGetSection({ toGet, addToGet, switchToAlreadyHave }) {
 
         if (value !== "") {
 
-            // check grocery doesn't already exist
+            // check grocery doesn't already exist and that dont already have grocery
             var alreadyExists = false
+            var alreadyHave = false
+
             toGet.forEach(grocery => {
                 if (grocery.name === value) {
                     alreadyExists = true
                 }
             })
+
+            have.forEach(grocery => {
+                if (grocery.name === value) {
+                    alreadyHave = true
+                    window.alert("Already Have " + grocery.name)
+                }
+            })
             
-            if (!alreadyExists) {
+            if (!alreadyExists && !alreadyHave) {
                 addToGet(value)
             }
 

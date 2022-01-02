@@ -85,7 +85,7 @@ function App() {
       
       <h1>Groceries</h1>
 
-      <ToGetSection toGet={groceries.toGet} addToGet={addToGet} switchToAlreadyHave={switchToAlreadyHave} />
+      <ToGetSection have={groceries.have} toGet={groceries.toGet} addToGet={addToGet} switchToAlreadyHave={switchToAlreadyHave} />
 
       <AlreadyHaveSection removeAlreadyHave={removeAlreadyHave} addAlreadyHave={addAlreadyHave} have={groceries.have} />
 
