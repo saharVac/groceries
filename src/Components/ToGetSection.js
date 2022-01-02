@@ -1,3 +1,4 @@
+import 'jquery'
 import React, { useRef } from "react";
 
 function ToGetSection({ toGet, addToGet, switchToAlreadyHave }) {
@@ -20,6 +21,8 @@ function ToGetSection({ toGet, addToGet, switchToAlreadyHave }) {
             if (!alreadyExists) {
                 addToGet(value)
             }
+
+            addToGetRef.current.value = ""
         }
     }
 

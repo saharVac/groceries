@@ -20,6 +20,8 @@ function AlreadyHaveSection({ have, addAlreadyHave, removeAlreadyHave }) {
             if (!alreadyExists) {
                 addAlreadyHave(value)
             }
+
+            addAlreadyHaveRef.current.value = ""
         }
     }
 
