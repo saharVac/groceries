@@ -70,7 +70,14 @@ function App() {
         grocerySwitching
       ]
     })
+  }
 
+  const removeAlreadyHave = (key) => {
+    const newHave = groceries.have.filter(grocery => grocery.key !== key)
+    setGroceries({
+      ...groceries,
+      have: newHave
+    })
   }
 
   return (
@@ -80,7 +87,7 @@ function App() {
 
       <ToGetSection toGet={groceries.toGet} addToGet={addToGet} switchToAlreadyHave={switchToAlreadyHave} />
 
-      <AlreadyHaveSection addAlreadyHave={addAlreadyHave} have={groceries.have} />
+      <AlreadyHaveSection removeAlreadyHave={removeAlreadyHave} addAlreadyHave={addAlreadyHave} have={groceries.have} />
 
     </div>
   );

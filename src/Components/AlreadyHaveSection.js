@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-function AlreadyHaveSection({ have, addAlreadyHave }) {
+function AlreadyHaveSection({ have, addAlreadyHave, removeAlreadyHave }) {
 
     const addAlreadyHaveRef = useRef()
 
@@ -23,6 +23,10 @@ function AlreadyHaveSection({ have, addAlreadyHave }) {
         }
     }
 
+    const remove = (key) => {
+        removeAlreadyHave(key)
+    }
+
     return(
         <div className="section already-have-section">
 
@@ -38,6 +42,7 @@ function AlreadyHaveSection({ have, addAlreadyHave }) {
                     have.map(grocery => {
                         return <li key={grocery.key} className="grocery already-have-grocery">
                             <h3 className="already-have-grocery-name">{grocery.name}</h3>
+                            <button onClick={() => remove(grocery.key)} className="ran-out-btn">Ran Out</button>
                         </li>
                     })
                 }

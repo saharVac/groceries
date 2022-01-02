@@ -14,11 +14,11 @@ ul {
   border-bottom: 1px solid black;
 }
 
-.to-get-list {
+.to-get-list, .already-have-list {
   padding: 0;
 }
 
-.to-get-grocery {
+.to-get-grocery, .already-have-grocery {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -26,11 +26,11 @@ ul {
   align-items: center;
 }
 
-.to-get-grocery-name {
+.to-get-grocery-name, .already-have-grocery-name {
   margin-left: 50px;
 }
 
-.switch-to-already-have-btn {
+.switch-to-already-have-btn, .ran-out-btn {
   height: 30%;
   margin-right: 50px;
   right: 0;
