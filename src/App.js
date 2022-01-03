@@ -9,7 +9,6 @@ import AlreadyHaveSection from './Components/AlreadyHaveSection'
 // TODO: ability to add groceries already have
 // TODO: ability to delete groceries from already have when they run out
 // TODO: Account for groceries quantity
-// TODO: When adding to get, check that doesn't already exist in already have, if so show popup
 
 
 function App() {
