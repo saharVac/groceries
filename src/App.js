@@ -7,8 +7,8 @@ import AlreadyHaveSection from './Components/AlreadyHaveSection'
 // TODO: characterizing groceries to always have so that when runs out, goes back on the to get list
 // TODO: show groceries already have
 // TODO: ability to add groceries already have
-// TODO: ability to delete groceries from already have when they run out
 // TODO: Account for groceries quantity
+// TODO: Dedfining essential grocery: how much to get at a time
 
 
 function App() {
@@ -81,9 +81,16 @@ function App() {
 
   return (
     <div className="App">
-      
-      <h1>Groceries</h1>
 
+      <header>
+        <h1>Grocery List</h1>
+      </header>
+
+      <div className="view-selection-section">
+        <button className="to-get-view-btn view-selection-btn">To Get</button>
+        <button className="already-have-view-btn view-selection-btn">Alredy Have</button>
+      </div>
+      
       <ToGetSection have={groceries.have} toGet={groceries.toGet} addToGet={addToGet} switchToAlreadyHave={switchToAlreadyHave} />
 
       <AlreadyHaveSection removeAlreadyHave={removeAlreadyHave} addAlreadyHave={addAlreadyHave} have={groceries.have} />
