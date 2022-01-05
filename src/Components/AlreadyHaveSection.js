@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import AmountInput from './AmountInput'
 
 function AlreadyHaveSection({ have, addAlreadyHave, removeAlreadyHave }) {
 
@@ -35,6 +36,7 @@ function AlreadyHaveSection({ have, addAlreadyHave, removeAlreadyHave }) {
             <h2 className="already-have-title">Already Have</h2>
 
             <div className="add-already-have-section">
+                <AmountInput section="already-have" />
                 <input ref={addAlreadyHaveRef} className="add-already-have-input add-name" type="text"/>
                 <button onClick={() => add()} className="add-already-have-button">Add</button>
             </div>

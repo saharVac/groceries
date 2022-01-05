@@ -46,9 +46,7 @@ function ToGetSection({ have, toGet, addToGet, switchToAlreadyHave }) {
             <h2 className="to-get-title">To Get</h2>
 
             <div className="add-to-get-section">
-
-                <AmountInput />
-
+                <AmountInput section="to-get" />
                 <input ref={addToGetRef} className="add-to-get-input add-name" type="text"/>
                 <button onClick={() => add()} className="add-to-get-button">Add</button>
             </div>

@@ -1,11 +1,12 @@
 import $ from 'jquery'
 import React, { useRef } from "react";
 
-function AmountInput() {
+function AmountInput({ section }) {
 
     const countRef = useRef(1)
 
     const changeAmount = (action) => {
+
 
         // change value
         if (action === 'subtract') {
@@ -18,13 +19,18 @@ function AmountInput() {
         }
 
         // Update count
-        $(".amount-input-number").html(countRef.current)
+        if (section === 'to-get') {
+            $(".to-get-number").html(countRef.current)
+        } else {
+            $(".already-have-number").html(countRef.current)
+        }
+        
     }
 
     return(
         <div className="amount-input">
             <div onClick={() => changeAmount('subtract')} className="amount-input-action amount-input-subtract">-</div>
-            <div className="amount-input-number">1</div>
+            <div className={(section === 'to-get') ? "amount-input-number to-get-number" : "amount-input-number already-have-number"}>1</div>
             <div onClick={() => changeAmount('add')} className="amount-input-action amount-input-add">+</div>
         </div>
     )
