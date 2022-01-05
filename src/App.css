@@ -41,6 +41,32 @@ header h1 {
   font-weight: bold;
 }
 
+.add-to-get-section {
+  display: flex;
+}
+
+.amount-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center !important;
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 20% !important;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.amount-input-number {
+  margin: 0 18px;
+}
+
+.add-name {
+  width: 50%;
+  margin-right: 2.5%;
+}
+
 ul {
   list-style: none;
 }
@@ -64,13 +90,25 @@ ul {
   background-color: white;
 }
 
+.grocery-name-and-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
 .to-get-grocery-name, .already-have-grocery-name {
   height: auto;
-  margin: 0 0 0 50px;
+  margin: 0;
+  margin-left: 20px;
 }
 
 .switch-to-already-have-btn, .ran-out-btn {
   height: 60%;
   margin-right: 50px;
   right: 0;
+}
+
+.grocery-amount {
+  margin: 0;
 }

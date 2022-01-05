@@ -35,7 +35,7 @@ function AlreadyHaveSection({ have, addAlreadyHave, removeAlreadyHave }) {
             <h2 className="already-have-title">Already Have</h2>
 
             <div className="add-already-have-section">
-                <input ref={addAlreadyHaveRef} className="add-already-have-input" type="text"/>
+                <input ref={addAlreadyHaveRef} className="add-already-have-input add-name" type="text"/>
                 <button onClick={() => add()} className="add-already-have-button">Add</button>
             </div>
 
@@ -43,7 +43,10 @@ function AlreadyHaveSection({ have, addAlreadyHave, removeAlreadyHave }) {
                 {
                     have.map(grocery => {
                         return <li key={grocery.key} className="grocery already-have-grocery">
-                            <h3 className="already-have-grocery-name">{grocery.name}</h3>
+                            <div className="grocery-name-and-amount">
+                                <h3 className="grocery-amount">{grocery.amount}</h3>
+                                <h3 className="already-have-grocery-name">{grocery.name}</h3>
+                            </div>
                             <button onClick={() => remove(grocery.key)} className="ran-out-btn">Ran Out</button>
                         </li>
                     })

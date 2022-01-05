@@ -5,11 +5,9 @@ import AlreadyHaveSection from './Components/AlreadyHaveSection'
 
 
 // TODO: characterizing groceries to always have so that when runs out, goes back on the to get list
-// TODO: show groceries already have
-// TODO: ability to add groceries already have
 // TODO: Account for groceries quantity
 // TODO: Dedfining essential grocery: how much to get at a time
-
+// TODO: consolidate grocery element to a Component
 
 function App() {
 
@@ -19,13 +17,14 @@ function App() {
     have: []
   })
 
-  const addToGet = (name) => {
+  const addToGet = (name, amount) => {
     setGroceries({
       ...groceries,
       toGet: [
         ...groceries.toGet,
         {
           name: name,
+          amount: amount,
           key: name
         }
       ]
