@@ -29,7 +29,7 @@ function ToGetSection({ have, toGet, addToGet, switchToAlreadyHave }) {
             })
             
             if (!alreadyExists && !alreadyHave) {
-                addToGet(value, $(".amount-input-number").html())
+                addToGet(value, $(".to-get-number").html())
             }
 
             addToGetRef.current.value = ""

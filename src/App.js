@@ -31,7 +31,7 @@ function App() {
     })
   }
 
-  const addAlreadyHave = (name) => {
+  const addAlreadyHave = (name, amount) => {
     console.log("Adding already having ", name)
     setGroceries({
       ...groceries,
@@ -39,7 +39,8 @@ function App() {
         ...groceries.have,
         {
           name: name,
-          key: name
+          key: name,
+          amount: amount
         }
       ]
     })

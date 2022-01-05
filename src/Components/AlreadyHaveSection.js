@@ -1,3 +1,4 @@
+import $ from 'jquery'
 import React, { useRef } from "react";
 import AmountInput from './AmountInput'
 
@@ -19,7 +20,7 @@ function AlreadyHaveSection({ have, addAlreadyHave, removeAlreadyHave }) {
             })
             
             if (!alreadyExists) {
-                addAlreadyHave(value)
+                addAlreadyHave(value, $(".already-have-number").html())
             }
 
             addAlreadyHaveRef.current.value = ""
